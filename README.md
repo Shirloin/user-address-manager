@@ -102,6 +102,7 @@ Spring Boot also accepts these as CLI flags, e.g.
 | Doc                                         | What's in it                                                                |
 | ------------------------------------------- | --------------------------------------------------------------------------- |
 | [Tech stack](./docs/tech-stack.md)          | Languages, frameworks, and libraries used on each side, with brief rationale |
+| [User → Address flow](./docs/user-address-flow.md) | End-to-end design of the one-to-many relationship: data model, API, request flow |
 | [Backend architecture](./docs/backend.md)   | Package layout, SOLID applied concretely, exception handling, validation     |
 | [Frontend architecture](./docs/frontend.md) | Router + Layout, the TanStack-Query / Zustand / Axios state boundary, file tree |
 | [API reference](./docs/api.md)              | Every endpoint, request/response shapes, error envelope, validation rules    |

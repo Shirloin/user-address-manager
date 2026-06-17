@@ -16,7 +16,24 @@ Manage users and their addresses (one user, many addresses).
 You need **JDK 17+**, **Node 18+**, and **npm**. That's it — no database, no
 extra services.
 
-### 1. Start the backend
+### 1. Configure environment (do this first)
+
+Before starting either app, review the environment configuration and decide
+whether the defaults work for you. The defaults assume the backend on port
+`8080` and the frontend on `5173` — if either is in use locally, you must
+override them before the next steps.
+
+```bash
+cd frontend
+cp .env.example .env   # then edit VITE_API_BASE_URL if you changed the backend port
+```
+
+The backend reads `backend/src/main/resources/application.properties` —
+edit `server.port` there if `8080` is taken. See
+[Environment configuration](#environment-configuration) below for the full
+list of variables and defaults.
+
+### 2. Start the backend
 
 ```bash
 cd backend
@@ -27,7 +44,7 @@ cd backend
 Wait for `Started UserServiceApplication`. The API is on
 <http://localhost:8080/api/users>.
 
-### 2. Start the frontend (new terminal)
+### 3. Start the frontend (new terminal)
 
 ```bash
 cd frontend
@@ -44,9 +61,10 @@ Both apps come up empty of user input but pre-seeded with four sample users
 
 ## Environment configuration
 
-The app runs with **no env files set up at all** — both backend port and
-frontend API base URL fall back to sensible defaults. The settings below are
-overrides for non-default setups.
+Both apps fall back to sensible defaults if you skip this step, but you
+should review the table below **before** running anything locally so the
+frontend can reach the backend. The settings here are the overrides for any
+non-default setup.
 
 ### Frontend — `frontend/.env` (optional)
 

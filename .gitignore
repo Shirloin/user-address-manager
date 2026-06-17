@@ -1,0 +1,16 @@
+# Claude Code harness state
+.claude/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Editors / IDEs (root-level overrides; individual subprojects have their own too)
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.env

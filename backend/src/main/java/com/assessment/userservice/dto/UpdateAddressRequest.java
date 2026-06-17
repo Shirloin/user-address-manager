@@ -1,0 +1,29 @@
+package com.assessment.userservice.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UpdateAddressRequest {
+
+    @NotBlank(message = "street is required")
+    private String street;
+
+    @NotBlank(message = "city is required")
+    private String city;
+
+    @NotBlank(message = "state is required")
+    private String state;
+
+    @NotBlank(message = "zip is required")
+    private String zip;
+
+    @NotBlank(message = "country is required")
+    private String country;
+}
